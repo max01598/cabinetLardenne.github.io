@@ -1,0 +1,83 @@
+:root {
+    --couleur-primaire: #ffffff;   /* Blanc */
+    --couleur-secondaire: #e573a6; /* Rose */
+}
+
+section {
+    min-height: 100vh;
+}
+
+/* Identification des sections par leur id */
+#accueil {
+    background-color: var(--couleur-primaire);
+}
+
+#equipe {
+    background-color: var(--couleur-secondaire);
+}
+
+#services {
+    background-color: var(--couleur-primaire);
+}
+
+#contact {
+    background-color: var(--couleur-secondaire);
+}
+
+/* Styles pour la section d'accueil */
+#accueil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.noms {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.separateur {
+    width: 50%;
+    border: 0;
+    height: 2px;
+    background: var(--couleur-secondaire);
+    margin: 20px auto;
+}
+
+.btn-principal {
+    background-color: var(--couleur-secondaire);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-principal:hover {
+    background-color: #d45d8c;
+}
+
+.lien-contact {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--couleur-secondaire);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.lien-contact:hover {
+    text-decoration: underline;
+}
