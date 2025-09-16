@@ -1,0 +1,328 @@
+/* ========================
+   Public Sans - Font Faces
+   ======================== */
+
+/* Extra Light (100) */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-ExtraLight.woff2') format('woff2'),
+       url('fonts/PublicSans-ExtraLight.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-ExtraLightItalic.woff2') format('woff2'),
+       url('fonts/PublicSans-ExtraLightItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Light (300) */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-Light.woff2') format('woff2'),
+       url('fonts/PublicSans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-LightItalic.woff2') format('woff2'),
+       url('fonts/PublicSans-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Regular (400) */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-Regular.woff2') format('woff2'),
+       url('fonts/PublicSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-Italic.woff2') format('woff2'),
+       url('fonts/PublicSans-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Medium (500) */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-Medium.woff2') format('woff2'),
+       url('fonts/PublicSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-MediumItalic.woff2') format('woff2'),
+       url('fonts/PublicSans-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* SemiBold (600) */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-SemiBold.woff2') format('woff2'),
+       url('fonts/PublicSans-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-SemiBoldItalic.woff2') format('woff2'),
+       url('fonts/PublicSans-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bold (700) */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-Bold.woff2') format('woff2'),
+       url('fonts/PublicSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-BoldItalic.woff2') format('woff2'),
+       url('fonts/PublicSans-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ExtraBold (800) */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-ExtraBold.woff2') format('woff2'),
+       url('fonts/PublicSans-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-ExtraBoldItalic.woff2') format('woff2'),
+       url('fonts/PublicSans-ExtraBoldItalic.woff') format('woff');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Black (900) */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-Black.woff2') format('woff2'),
+       url('fonts/PublicSans-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-BlackItalic.woff2') format('woff2'),
+       url('fonts/PublicSans-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+/* ========================
+   Public Sans - Font Faces
+   ======================== */
+
+/* Extra Light (100) */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-ExtraLight.woff2') format('woff2'),
+       url('fonts/PublicSans-ExtraLight.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-ExtraLightItalic.woff2') format('woff2'),
+       url('fonts/PublicSans-ExtraLightItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Light (300) */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-Light.woff2') format('woff2'),
+       url('fonts/PublicSans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-LightItalic.woff2') format('woff2'),
+       url('fonts/PublicSans-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Regular (400) */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-Regular.woff2') format('woff2'),
+       url('fonts/PublicSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-Italic.woff2') format('woff2'),
+       url('fonts/PublicSans-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Medium (500) */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-Medium.woff2') format('woff2'),
+       url('fonts/PublicSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-MediumItalic.woff2') format('woff2'),
+       url('fonts/PublicSans-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* SemiBold (600) */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-SemiBold.woff2') format('woff2'),
+       url('fonts/PublicSans-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-SemiBoldItalic.woff2') format('woff2'),
+       url('fonts/PublicSans-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bold (700) */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-Bold.woff2') format('woff2'),
+       url('fonts/PublicSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-BoldItalic.woff2') format('woff2'),
+       url('fonts/PublicSans-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ExtraBold (800) */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-ExtraBold.woff2') format('woff2'),
+       url('fonts/PublicSans-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-ExtraBoldItalic.woff2') format('woff2'),
+       url('fonts/PublicSans-ExtraBoldItalic.woff') format('woff');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Black (900) */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-Black.woff2') format('woff2'),
+       url('fonts/PublicSans-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Public Sans';
+  src: url('fonts/PublicSans-BlackItalic.woff2') format('woff2'),
+       url('fonts/PublicSans-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ========================
+   Garet - Font Faces
+   ======================== */
+
+/* Book (400) */
+@font-face {
+  font-family: 'Garet';
+  src: url('fonts/Garet-Book.woff2') format('woff2'),
+       url('fonts/Garet-Book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Heavy (800) */
+@font-face {
+  font-family: 'Garet';
+  src: url('fonts/Garet-Heavy.woff2') format('woff2'),
+       url('fonts/Garet-Heavy.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
