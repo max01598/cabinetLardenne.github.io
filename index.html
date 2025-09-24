@@ -3,24 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cabinet infirmier libéral lardenne</title>
+    <title>Section Accueil</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="fonts.css">
 </head>
 <body>
-    <main>
-        <section id="accueil">
-            <img src="images/logo.png" alt="Logo cabinet" class="logo">
-            <h1 class="titre">CABINET INFIRMIER LARDENNE</h1>
-            <p class="noms">Manon LORENTE &amp; Sarah BROUILLET</p>
-            <hr class="separateur">
-            <button class="btn-principal">Prendre rendez-vous</button>
-            <a href="#contact" class="lien-contact">Nous contacter</a>
-        </section>
+    <section class="section-accueil">
+        <div class="bloc bloc-1">
+            <img src="images/logo.png" alt="Logo" class="logo-img">
+        </div>
+        <div class="bloc titre">CABINET INFIRMIER LARDENNE</div>
+        <div class="bloc sous_titre">Manon LORENTE & Sarah BROUILLET</div>
+        <div class="bloc separateur">
+            <div class="separateur-rouge"></div>
+        </div>
+        <div class="bloc prise_rdv">
+            <button class="btn-rdv">Prendre rendez-vous</button>
+        </div>
+        <div class="bloc contact">Nous contacter</div>
+    </section>
 
-        <section id="presentation">
-            <h1>CABINET INFIRMIER LARDENNE</h1>
-        </section>
-    </main>
+    <section class="section-presentation">
+        <div class="presentation_image">
+            <img src="images/presentation.jpg" alt="Description de l'image">
+        </div>
+        <div class="presentation_contenu">
+             <div class="presentation_titre">
+                QUI SOMMES NOUS ? 
+            </div>
+            <div class="presentation_texte">
+                Bienvenues au Cabinet Infirmier Lardenne ! Manon Lorente et Sarah Brouillet, infirmières diplômées d'État, vous accueillent dans leur cabinet moderne et chaleureux. 
+                A faire !!!!
+            </div>
+        </div>
+    </section>
+
+    <section class="section-service">
+        <div class="service_titre">
+            Des soins pour les grands et les petits
+        </div>
+       <div class="service-bloc-2" id="serviceCarousel">
+            <div class="service-item active">
+                <div class="service-label">Suivi diabétique</div>
+            </div>
+            <div class="service-item">
+                <div class="service-label">Injections<br>& perfusions</div>
+            </div>
+            <div class="service-item">
+                <div class="service-label">Alimentation artificielle</div>
+            </div>
+            <div class="service-item">
+                <div class="service-label">Sondes urinaires<br>& nasogastriques</div>
+            </div>
+            <div class="service-item">
+                <div class="service-label">Soins de Trachéotomie</div>
+            </div>
+            <div class="service-item">
+                <div class="service-label">Dispositifs spécifiques :<br>Picc-line, aiguille de Huber/Gripper</div>
+            </div>
+            <div class="service-item">
+                <div class="service-label">Soins de stomies</div>
+            </div>
+            <div class="service-item">
+                <div class="service-label">Pansements : simples<br>& complexes</div>
+            </div>
+            <div class="service-item">
+                <div class="service-label">Evaluation des plaies<br>& cicatrisation</div>
+            </div>
+            <div class="service-item">
+                <div class="service-label">Suivi post-opératoire</div>
+            </div>
+            <div class="service-item">
+                <div class="service-label">Soins d'hygiène<br>& de confort</div>
+            </div>
+            <div class="service-item">
+                <div class="service-label">Surveillance thérapeutique</div>
+            </div>
+       </div>
+       <div class="service-bloc-3">
+            <div class="service_image">
+                <img src="images/alert.gif" alt="Description de l'image">
+            </div>
+            <div class="service-bloc-3-label">
+                xxx
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.getElementById('serviceCarousel');
+            const items = carousel.querySelectorAll('.service-item');
+
+            function updateActiveItem() {
+                const carouselRect = carousel.getBoundingClientRect();
+                const carouselCenter = carouselRect.left + carouselRect.width / 2;
+
+                let closestItem = null;
+                let closestDistance = Infinity;
+
+                items.forEach(item => {
+                    const itemRect = item.getBoundingClientRect();
+                    const itemCenter = itemRect.left + itemRect.width / 2;
+                    const distance = Math.abs(carouselCenter - itemCenter);
+
+                    if (distance < closestDistance) {
+                        closestDistance = distance;
+                        closestItem = item;
+                    }
+                });
+
+                // Retirer la classe active de tous les éléments
+                items.forEach(item => item.classList.remove('active'));
+                
+                // Ajouter la classe active à l'élément le plus proche du centre
+                if (closestItem) {
+                    closestItem.classList.add('active');
+                }
+            }
+
+            // Fonction pour centrer le premier élément
+            function centerFirstItem() {
+                // Réinitialiser le scroll à 0 pour commencer au début
+                carousel.scrollLeft = 0;
+            }
+
+            // Écouter les événements de scroll
+            carousel.addEventListener('scroll', updateActiveItem);
+            
+            // Initialiser avec un délai pour s'assurer que les éléments sont rendus
+            setTimeout(() => {
+                centerFirstItem();
+                updateActiveItem();
+            }, 100);
+        });
+    </script>
 </body>
 </html>
