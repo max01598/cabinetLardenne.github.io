@@ -41,98 +41,150 @@
         <div class="service_titre">
             Des soins pour les grands et les petits
         </div>
-       <div class="service-bloc-2" id="serviceCarousel">
-            <div class="service-item active">
-                <div class="service-label">Suivi diabétique</div>
+        <div class="scroll-container">
+            <div class="scroll-content" id="scrollContent">
+                <div class="item">
+                    <div class="item-number">1/5</div>
+                    Slide 1
+                </div>
+                <div class="item">
+                    <div class="item-number">2/5</div>
+                    Slide 2
+                </div>
+                <div class="item">
+                    <div class="item-number">3/5</div>
+                    Slide 3
+                </div>
+                <div class="item">
+                    <div class="item-number">4/5</div>
+                    Slide 4
+                </div>
+                <div class="item">
+                    <div class="item-number">5/5</div>
+                    Slide 5
+                </div>
             </div>
-            <div class="service-item">
-                <div class="service-label">Injections<br>& perfusions</div>
-            </div>
-            <div class="service-item">
-                <div class="service-label">Alimentation artificielle</div>
-            </div>
-            <div class="service-item">
-                <div class="service-label">Sondes urinaires<br>& nasogastriques</div>
-            </div>
-            <div class="service-item">
-                <div class="service-label">Soins de Trachéotomie</div>
-            </div>
-            <div class="service-item">
-                <div class="service-label">Dispositifs spécifiques :<br>Picc-line, aiguille de Huber/Gripper</div>
-            </div>
-            <div class="service-item">
-                <div class="service-label">Soins de stomies</div>
-            </div>
-            <div class="service-item">
-                <div class="service-label">Pansements : simples<br>& complexes</div>
-            </div>
-            <div class="service-item">
-                <div class="service-label">Evaluation des plaies<br>& cicatrisation</div>
-            </div>
-            <div class="service-item">
-                <div class="service-label">Suivi post-opératoire</div>
-            </div>
-            <div class="service-item">
-                <div class="service-label">Soins d'hygiène<br>& de confort</div>
-            </div>
-            <div class="service-item">
-                <div class="service-label">Surveillance thérapeutique</div>
-            </div>
-       </div>
-       <div class="service-bloc-3">
-            <div class="service_image">
-                <img src="images/alert.gif" alt="Description de l'image">
-            </div>
-            <div class="service-bloc-3-label">
-                xxx
+            
+            <div class="arrow arrow-left" id="arrowLeft">‹</div>
+            <div class="arrow arrow-right" id="arrowRight">›</div>
         </div>
     </section>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const carousel = document.getElementById('serviceCarousel');
-            const items = carousel.querySelectorAll('.service-item');
+     <script>
+        class HorizontalScroll {
+            constructor() {
+                this.scrollContent = document.getElementById('scrollContent');
+                this.arrowLeft = document.getElementById('arrowLeft');
+                this.arrowRight = document.getElementById('arrowRight');
+                this.indicators = document.querySelectorAll('.indicator');
+                this.currentIndex = 0;
+                this.totalSlides = 5;
+                // Pas besoin de slideWidth maintenant
 
-            function updateActiveItem() {
-                const carouselRect = carousel.getBoundingClientRect();
-                const carouselCenter = carouselRect.left + carouselRect.width / 2;
+                this.init();
+            }
 
-                let closestItem = null;
-                let closestDistance = Infinity;
+            init() {
+                // Event listeners pour les flèches
+                this.arrowLeft.addEventListener('click', () => this.goToPrevious());
+                this.arrowRight.addEventListener('click', () => this.goToNext());
 
-                items.forEach(item => {
-                    const itemRect = item.getBoundingClientRect();
-                    const itemCenter = itemRect.left + itemRect.width / 2;
-                    const distance = Math.abs(carouselCenter - itemCenter);
-
-                    if (distance < closestDistance) {
-                        closestDistance = distance;
-                        closestItem = item;
-                    }
+                // Event listeners pour les indicateurs
+                this.indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => this.goToSlide(index));
                 });
 
-                // Retirer la classe active de tous les éléments
-                items.forEach(item => item.classList.remove('active'));
-                
-                // Ajouter la classe active à l'élément le plus proche du centre
-                if (closestItem) {
-                    closestItem.classList.add('active');
+                // Initialiser l'état des flèches et des items
+                this.updateArrows();
+                this.updateSlide(); // Initialiser l'état actif du premier item
+
+                // Auto-scroll optionnel (décommentez si souhaité)
+                // this.startAutoScroll();
+            }
+
+            goToNext() {
+                if (this.currentIndex < this.totalSlides - 1) {
+                    this.currentIndex++;
+                    this.updateSlide();
                 }
             }
 
-            // Fonction pour centrer le premier élément
-            function centerFirstItem() {
-                // Réinitialiser le scroll à 0 pour commencer au début
-                carousel.scrollLeft = 0;
+            goToPrevious() {
+                if (this.currentIndex > 0) {
+                    this.currentIndex--;
+                    this.updateSlide();
+                }
             }
 
-            // Écouter les événements de scroll
-            carousel.addEventListener('scroll', updateActiveItem);
-            
-            // Initialiser avec un délai pour s'assurer que les éléments sont rendus
-            setTimeout(() => {
-                centerFirstItem();
-                updateActiveItem();
-            }, 100);
+            goToSlide(index) {
+                this.currentIndex = index;
+                this.updateSlide();
+            }
+
+            updateSlide() {
+                // Mise à jour des classes pour l'effet visuel
+                const items = document.querySelectorAll('.item');
+                items.forEach((item, index) => {
+                    // Supprimer toutes les classes de position
+                    item.classList.remove('active', 'prev', 'next', 'far-prev', 'far-next');
+                    
+                    const diff = index - this.currentIndex;
+                    
+                    if (diff === 0) {
+                        item.classList.add('active');
+                    } else if (diff === -1) {
+                        item.classList.add('prev');
+                    } else if (diff === 1) {
+                        item.classList.add('next');
+                    } else if (diff === -2) {
+                        item.classList.add('far-prev');
+                    } else if (diff === 2) {
+                        item.classList.add('far-next');
+                    }
+                    // Les autres items gardent le style par défaut (cachés)
+                });
+
+                // Mise à jour des indicateurs
+                this.indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === this.currentIndex);
+                });
+
+                // Mise à jour des flèches
+                this.updateArrows();
+            }
+
+            updateArrows() {
+                // Désactiver la flèche gauche si on est au début
+                this.arrowLeft.classList.toggle('disabled', this.currentIndex === 0);
+                
+                // Désactiver la flèche droite si on est à la fin
+                this.arrowRight.classList.toggle('disabled', this.currentIndex === this.totalSlides - 1);
+            }
+
+            // Auto-scroll optionnel
+            startAutoScroll() {
+                setInterval(() => {
+                    if (this.currentIndex < this.totalSlides - 1) {
+                        this.goToNext();
+                    } else {
+                        this.currentIndex = -1; // Reset pour recommencer
+                        this.goToNext();
+                    }
+                }, 3000);
+            }
+        }
+
+        // Initialiser le scroll horizontal quand la page est chargée
+        document.addEventListener('DOMContentLoaded', () => {
+            new HorizontalScroll();
+        });
+
+        // Support du clavier (flèches gauche/droite)
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                document.getElementById('arrowLeft').click();
+            } else if (e.key === 'ArrowRight') {
+                document.getElementById('arrowRight').click();
+            }
         });
     </script>
 </body>
