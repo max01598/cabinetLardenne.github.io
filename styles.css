@@ -171,6 +171,8 @@ body {
     font-size: 14px;
 }
 
+/* TODO : Avant tout definir les tailles d'ecran breaking point on va séparer les contenus par section puis la seconde section sera 1.5 vh et le reste permettra d'avoir une autre section avec l'image */
+
 .parcours_conteneur {
     display: flex;
     flex-direction: row;
