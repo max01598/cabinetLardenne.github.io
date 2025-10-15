@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: calc(40vh - 60px);
+    padding-top: 100px;
 }
 
 .bloc {
@@ -26,7 +26,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #333;
     font-size: 18px;
     font-weight: bold;
     background-color: transparent;
@@ -39,27 +38,29 @@ body {
 
 .bloc-1 {
     border-color: white;
-    height: calc((100vh - 100px) / 6);
+    height: clamp(200px, 50vw, 500px);
 }
 
 /* Le 28px peut etre adapté */
 .titre {
     border-color: white;
     height: auto;
-    font-size: clamp(16px, 5.5vw, 28px);
-    font-weight: bold;
+    font-size: clamp(16px, 5.5vw, 120px);
+    font-weight: normal;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-family: 'Garet';
 }
 
 .sous_titre {
     border-color: white;
     height: auto;
-    font-size: clamp(10px, 3.5vw, 17px);
-    font-weight: normal;
+    font-size: clamp(10px, 3.5vw, 50px);
+    font-weight: 300;
     white-space: nowrap;
     overflow: hidden;
+    font-family: 'Public Sans';
     text-overflow: ellipsis;
 }
 
@@ -74,9 +75,11 @@ body {
 }
 
 .prise_rdv {
+    text-align: center;
     border-color: white;
-    height: auto;
-    padding: clamp(25px, 5vh, 50px) 0 clamp(12px, 2.5vh, 25px) 0;
+    margin-top: 10px;
+    font-size: clamp(10px, 3.5vw, 50px);
+    font-weight: normal;
 }
 
  .btn-rdv {
